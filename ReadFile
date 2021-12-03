@@ -8,13 +8,13 @@ public class Main {
             File file = new File("Квиз ДР.txt");
             FileReader fr = new FileReader(file);
             BufferedReader reader = new BufferedReader(fr);
-            List<String> queation= new ArrayList<String>();
+            List<String> question= new ArrayList<String>();
             List<String> ans= new ArrayList<String>();
             String line;
             int i=0;
             while ((line=reader.readLine())!= null) {
                 if (i%2==0){
-                    queation.add(line);
+                    question.add(line);
                 }
                 else{
                     ans.add(line);
@@ -22,7 +22,7 @@ public class Main {
                 i++;
             }
 //            String [] answer=ans.get(0).split(",");  разделение ответов
-            System.out.println(queation);
+            System.out.println(question);
             System.out.println(ans);
         }
         catch(IOException ex){
